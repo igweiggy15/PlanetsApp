@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Planet View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="PlanetViewController" id="BYZ-38-t0r" customClass="PlanetViewController" customModule="PlanetAssessment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jbG-wH-K37">
+                                <rect key="frame" x="0.0" y="100" width="414" height="796"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlanetTableCell" rowHeight="92" id="bci-Gl-sbN" customClass="PlanetTableCell" customModule="PlanetAssessment" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="92"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bci-Gl-sbN" id="hoH-13-Hhh">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="92"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Planet is Earth Moons: 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="koh-MG-57A">
+                                                    <rect key="frame" x="50" y="36" width="183" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="koh-MG-57A" firstAttribute="leading" secondItem="hoH-13-Hhh" secondAttribute="leadingMargin" constant="30" id="47D-Rx-jt9"/>
+                                                <constraint firstItem="koh-MG-57A" firstAttribute="centerY" secondItem="hoH-13-Hhh" secondAttribute="centerY" id="By4-cm-3G6"/>
+                                                <constraint firstItem="koh-MG-57A" firstAttribute="top" secondItem="hoH-13-Hhh" secondAttribute="topMargin" constant="25" id="wTh-F9-rPH"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="mainLabel" destination="koh-MG-57A" id="SVV-bH-fok"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="MCX-T1-WBn"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Uwe-8j-9Tf"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ZY-Qw-Xtj">
+                                <rect key="frame" x="337" y="57" width="41" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="n81-Xg-gbR"/>
+                                </constraints>
+                                <state key="normal" title="+" image="star.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nbh-ev-Q9n"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3ZY-Qw-Xtj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="337" id="CLM-Ch-O5u"/>
+                            <constraint firstItem="jbG-wH-K37" firstAttribute="top" secondItem="3ZY-Qw-Xtj" secondAttribute="bottom" constant="18" id="EAr-rf-VNL"/>
+                            <constraint firstItem="jbG-wH-K37" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="G7O-4J-STH"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="jbG-wH-K37" secondAttribute="bottom" constant="-34" id="aNH-Tu-Mda"/>
+                            <constraint firstItem="3ZY-Qw-Xtj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="13" id="cB1-eU-uJA"/>
+                            <constraint firstItem="jbG-wH-K37" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gnr-Cy-s0P"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3ZY-Qw-Xtj" secondAttribute="trailing" constant="36" id="wkF-3X-xAa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="planetTableView" destination="jbG-wH-K37" id="Ku4-df-VjN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="85.714285714285708"/>
+        </scene>
+        <!--Add View Controller-->
+        <scene sceneID="QjN-Li-CnC">
+            <objects>
+                <viewController storyboardIdentifier="AddViewController" id="h7h-wH-r3B" customClass="AddViewController" customModule="PlanetAssessment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8oO-Hn-Gvy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="108" translatesAutoresizingMaskIntoConstraints="NO" id="tac-SA-Jfe">
+                                <rect key="frame" x="177" y="220" width="116" height="272"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Planets Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fah-rj-xEn">
+                                        <rect key="frame" x="13.5" y="0.0" width="89.5" height="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Number of Moons" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ikC-yw-oJJ">
+                                        <rect key="frame" x="0.0" y="125" width="116" height="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Bw-dR-WgA">
+                                        <rect key="frame" x="21" y="250" width="74" height="22"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Create" image="moon.circle.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="buttonTouched:" destination="h7h-wH-r3B" eventType="touchUpInside" id="9LD-RQ-oAH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tac-SA-Jfe" firstAttribute="top" secondItem="hys-bm-CXh" secondAttribute="top" constant="176" id="Bog-p4-wR2"/>
+                            <constraint firstItem="hys-bm-CXh" firstAttribute="trailing" secondItem="tac-SA-Jfe" secondAttribute="trailing" constant="121" id="CcW-iZ-MbG"/>
+                            <constraint firstItem="hys-bm-CXh" firstAttribute="bottom" secondItem="tac-SA-Jfe" secondAttribute="bottom" constant="370" id="SDc-zw-P03"/>
+                            <constraint firstItem="tac-SA-Jfe" firstAttribute="leading" secondItem="hys-bm-CXh" secondAttribute="leading" constant="177" id="sCz-Gx-osV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hys-bm-CXh"/>
+                    </view>
+                    <connections>
+                        <outlet property="moonTextField" destination="ikC-yw-oJJ" id="aFP-2n-gWw"/>
+                        <outlet property="planetTextField" destination="fah-rj-xEn" id="rIh-Kg-pTO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3xC-UA-5Qa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="784.82142857142856"/>
+        </scene>
+        <!--Alert View Controller-->
+        <scene sceneID="yGQ-Mr-2z1">
+            <objects>
+                <viewController storyboardIdentifier="AlertViewController" id="Z6T-9L-ba3" customClass="AlertViewController" customModule="PlanetAssessment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jhd-tV-Nq8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bvx-td-Qm3">
+                                <rect key="frame" x="87" y="249" width="240" height="179"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Earth doesn't have that many moons" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CnU-ih-TIc">
+                                        <rect key="frame" x="35" y="30" width="170" height="118"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="5YG-td-fdk"/>
+                    </view>
+                    <connections>
+                        <outlet property="mainLabel" destination="CnU-ih-TIc" id="VvQ-dL-sXl"/>
+                        <outlet property="mainView" destination="bvx-td-Qm3" id="Ip3-c6-uM1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a5X-Oc-gwi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1139" y="427"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="moon.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="star.fill" catalog="system" width="64" height="58"/>
+    </resources>
+</document>
